@@ -36,6 +36,8 @@ Partial Class Start
         Me.lblBoardColour = New System.Windows.Forms.Label()
         Me.btnBoardColour = New System.Windows.Forms.Button()
         Me.tabOther = New System.Windows.Forms.TabPage()
+        Me.lblAppleAmount = New System.Windows.Forms.Label()
+        Me.udAppleAmount = New System.Windows.Forms.NumericUpDown()
         Me.cbLengthIncrease = New System.Windows.Forms.CheckBox()
         Me.cbSpeedIncrease = New System.Windows.Forms.CheckBox()
         Me.cbDeathWalls = New System.Windows.Forms.CheckBox()
@@ -44,12 +46,14 @@ Partial Class Start
         Me.Button1 = New System.Windows.Forms.Button()
         Me.selectColour = New System.Windows.Forms.ColorDialog()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnLeaderboard = New System.Windows.Forms.Button()
         Me.Tabs.SuspendLayout()
         Me.tabSize.SuspendLayout()
         CType(Me.udGameHeight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.udGameWidth, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabColours.SuspendLayout()
         Me.tabOther.SuspendLayout()
+        CType(Me.udAppleAmount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbStartSpeed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,7 +62,7 @@ Partial Class Start
         Me.Tabs.Controls.Add(Me.tabSize)
         Me.Tabs.Controls.Add(Me.tabColours)
         Me.Tabs.Controls.Add(Me.tabOther)
-        Me.Tabs.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tabs.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Tabs.Location = New System.Drawing.Point(12, 41)
         Me.Tabs.Name = "Tabs"
         Me.Tabs.SelectedIndex = 0
@@ -82,42 +86,42 @@ Partial Class Start
         'lblGameHeight
         '
         Me.lblGameHeight.AutoSize = True
-        Me.lblGameHeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGameHeight.Location = New System.Drawing.Point(25, 102)
+        Me.lblGameHeight.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGameHeight.Location = New System.Drawing.Point(5, 100)
         Me.lblGameHeight.Name = "lblGameHeight"
-        Me.lblGameHeight.Size = New System.Drawing.Size(154, 29)
+        Me.lblGameHeight.Size = New System.Drawing.Size(174, 30)
         Me.lblGameHeight.TabIndex = 3
         Me.lblGameHeight.Text = "Game Height"
         '
         'udGameHeight
         '
-        Me.udGameHeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.udGameHeight.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.udGameHeight.Location = New System.Drawing.Point(185, 100)
         Me.udGameHeight.Maximum = New Decimal(New Integer() {40, 0, 0, 0})
         Me.udGameHeight.Minimum = New Decimal(New Integer() {15, 0, 0, 0})
         Me.udGameHeight.Name = "udGameHeight"
-        Me.udGameHeight.Size = New System.Drawing.Size(53, 35)
+        Me.udGameHeight.Size = New System.Drawing.Size(53, 37)
         Me.udGameHeight.TabIndex = 2
         Me.udGameHeight.Value = New Decimal(New Integer() {20, 0, 0, 0})
         '
         'lblGameWidth
         '
         Me.lblGameWidth.AutoSize = True
-        Me.lblGameWidth.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGameWidth.Location = New System.Drawing.Point(34, 61)
+        Me.lblGameWidth.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGameWidth.Location = New System.Drawing.Point(14, 59)
         Me.lblGameWidth.Name = "lblGameWidth"
-        Me.lblGameWidth.Size = New System.Drawing.Size(145, 29)
+        Me.lblGameWidth.Size = New System.Drawing.Size(165, 30)
         Me.lblGameWidth.TabIndex = 1
         Me.lblGameWidth.Text = "Game Width"
         '
         'udGameWidth
         '
-        Me.udGameWidth.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.udGameWidth.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.udGameWidth.Location = New System.Drawing.Point(185, 59)
         Me.udGameWidth.Maximum = New Decimal(New Integer() {40, 0, 0, 0})
         Me.udGameWidth.Minimum = New Decimal(New Integer() {15, 0, 0, 0})
         Me.udGameWidth.Name = "udGameWidth"
-        Me.udGameWidth.Size = New System.Drawing.Size(53, 35)
+        Me.udGameWidth.Size = New System.Drawing.Size(53, 37)
         Me.udGameWidth.TabIndex = 0
         Me.udGameWidth.Value = New Decimal(New Integer() {20, 0, 0, 0})
         '
@@ -140,10 +144,10 @@ Partial Class Start
         'lblFoodColour
         '
         Me.lblFoodColour.AutoSize = True
-        Me.lblFoodColour.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFoodColour.Location = New System.Drawing.Point(30, 119)
+        Me.lblFoodColour.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFoodColour.Location = New System.Drawing.Point(23, 116)
         Me.lblFoodColour.Name = "lblFoodColour"
-        Me.lblFoodColour.Size = New System.Drawing.Size(148, 29)
+        Me.lblFoodColour.Size = New System.Drawing.Size(160, 30)
         Me.lblFoodColour.TabIndex = 6
         Me.lblFoodColour.Text = "Food Colour"
         '
@@ -160,10 +164,10 @@ Partial Class Start
         'lblSnakeColour
         '
         Me.lblSnakeColour.AutoSize = True
-        Me.lblSnakeColour.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSnakeColour.Location = New System.Drawing.Point(19, 79)
+        Me.lblSnakeColour.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSnakeColour.Location = New System.Drawing.Point(12, 78)
         Me.lblSnakeColour.Name = "lblSnakeColour"
-        Me.lblSnakeColour.Size = New System.Drawing.Size(159, 29)
+        Me.lblSnakeColour.Size = New System.Drawing.Size(171, 30)
         Me.lblSnakeColour.TabIndex = 4
         Me.lblSnakeColour.Text = "Snake Colour"
         '
@@ -180,10 +184,10 @@ Partial Class Start
         'lblBoardColour
         '
         Me.lblBoardColour.AutoSize = True
-        Me.lblBoardColour.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBoardColour.Location = New System.Drawing.Point(22, 36)
+        Me.lblBoardColour.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBoardColour.Location = New System.Drawing.Point(14, 36)
         Me.lblBoardColour.Name = "lblBoardColour"
-        Me.lblBoardColour.Size = New System.Drawing.Size(156, 29)
+        Me.lblBoardColour.Size = New System.Drawing.Size(169, 30)
         Me.lblBoardColour.TabIndex = 2
         Me.lblBoardColour.Text = "Board Colour"
         '
@@ -199,6 +203,8 @@ Partial Class Start
         '
         'tabOther
         '
+        Me.tabOther.Controls.Add(Me.lblAppleAmount)
+        Me.tabOther.Controls.Add(Me.udAppleAmount)
         Me.tabOther.Controls.Add(Me.cbLengthIncrease)
         Me.tabOther.Controls.Add(Me.cbSpeedIncrease)
         Me.tabOther.Controls.Add(Me.cbDeathWalls)
@@ -212,14 +218,36 @@ Partial Class Start
         Me.tabOther.Text = "Other"
         Me.tabOther.UseVisualStyleBackColor = True
         '
+        'lblAppleAmount
+        '
+        Me.lblAppleAmount.AutoSize = True
+        Me.lblAppleAmount.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAppleAmount.Location = New System.Drawing.Point(12, 168)
+        Me.lblAppleAmount.Name = "lblAppleAmount"
+        Me.lblAppleAmount.Size = New System.Drawing.Size(146, 22)
+        Me.lblAppleAmount.TabIndex = 4
+        Me.lblAppleAmount.Text = "Apple Amount"
+        '
+        'udAppleAmount
+        '
+        Me.udAppleAmount.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.udAppleAmount.Location = New System.Drawing.Point(164, 165)
+        Me.udAppleAmount.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.udAppleAmount.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.udAppleAmount.Name = "udAppleAmount"
+        Me.udAppleAmount.Size = New System.Drawing.Size(53, 31)
+        Me.udAppleAmount.TabIndex = 3
+        Me.udAppleAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.udAppleAmount.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
         'cbLengthIncrease
         '
         Me.cbLengthIncrease.AutoSize = True
         Me.cbLengthIncrease.Checked = True
         Me.cbLengthIncrease.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbLengthIncrease.Location = New System.Drawing.Point(29, 149)
+        Me.cbLengthIncrease.Location = New System.Drawing.Point(29, 137)
         Me.cbLengthIncrease.Name = "cbLengthIncrease"
-        Me.cbLengthIncrease.Size = New System.Drawing.Size(200, 22)
+        Me.cbLengthIncrease.Size = New System.Drawing.Size(221, 24)
         Me.cbLengthIncrease.TabIndex = 8
         Me.cbLengthIncrease.Text = "Length increase with Food"
         Me.cbLengthIncrease.UseVisualStyleBackColor = True
@@ -229,9 +257,9 @@ Partial Class Start
         Me.cbSpeedIncrease.AutoSize = True
         Me.cbSpeedIncrease.Checked = True
         Me.cbSpeedIncrease.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbSpeedIncrease.Location = New System.Drawing.Point(31, 121)
+        Me.cbSpeedIncrease.Location = New System.Drawing.Point(31, 109)
         Me.cbSpeedIncrease.Name = "cbSpeedIncrease"
-        Me.cbSpeedIncrease.Size = New System.Drawing.Size(198, 22)
+        Me.cbSpeedIncrease.Size = New System.Drawing.Size(218, 24)
         Me.cbSpeedIncrease.TabIndex = 7
         Me.cbSpeedIncrease.Text = "Speed increase with Food"
         Me.cbSpeedIncrease.UseVisualStyleBackColor = True
@@ -241,9 +269,9 @@ Partial Class Start
         Me.cbDeathWalls.AutoSize = True
         Me.cbDeathWalls.Checked = True
         Me.cbDeathWalls.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbDeathWalls.Location = New System.Drawing.Point(76, 93)
+        Me.cbDeathWalls.Location = New System.Drawing.Point(76, 81)
         Me.cbDeathWalls.Name = "cbDeathWalls"
-        Me.cbDeathWalls.Size = New System.Drawing.Size(107, 22)
+        Me.cbDeathWalls.Size = New System.Drawing.Size(114, 24)
         Me.cbDeathWalls.TabIndex = 6
         Me.cbDeathWalls.Text = "Death Walls"
         Me.cbDeathWalls.UseVisualStyleBackColor = True
@@ -251,27 +279,27 @@ Partial Class Start
         'tbStartSpeed
         '
         Me.tbStartSpeed.LargeChange = 2
-        Me.tbStartSpeed.Location = New System.Drawing.Point(76, 42)
+        Me.tbStartSpeed.Location = New System.Drawing.Point(76, 30)
         Me.tbStartSpeed.Minimum = 1
         Me.tbStartSpeed.Name = "tbStartSpeed"
         Me.tbStartSpeed.Size = New System.Drawing.Size(104, 45)
         Me.tbStartSpeed.TabIndex = 4
-        Me.tbStartSpeed.Value = 3
+        Me.tbStartSpeed.Value = 5
         '
         'lblStartSpeed
         '
         Me.lblStartSpeed.AutoSize = True
-        Me.lblStartSpeed.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStartSpeed.Location = New System.Drawing.Point(85, 19)
+        Me.lblStartSpeed.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStartSpeed.Location = New System.Drawing.Point(85, 7)
         Me.lblStartSpeed.Name = "lblStartSpeed"
-        Me.lblStartSpeed.Size = New System.Drawing.Size(95, 20)
+        Me.lblStartSpeed.Size = New System.Drawing.Size(102, 21)
         Me.lblStartSpeed.TabIndex = 3
         Me.lblStartSpeed.Text = "Start Speed"
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(12, 286)
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(12, 334)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(272, 36)
         Me.Button1.TabIndex = 1
@@ -286,18 +314,29 @@ Partial Class Start
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(98, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 33)
+        Me.Label1.Size = New System.Drawing.Size(101, 36)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Snake"
+        '
+        'btnLeaderboard
+        '
+        Me.btnLeaderboard.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLeaderboard.Location = New System.Drawing.Point(12, 292)
+        Me.btnLeaderboard.Name = "btnLeaderboard"
+        Me.btnLeaderboard.Size = New System.Drawing.Size(272, 36)
+        Me.btnLeaderboard.TabIndex = 3
+        Me.btnLeaderboard.Text = "Leaderboard"
+        Me.btnLeaderboard.UseVisualStyleBackColor = True
         '
         'Start
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(300, 334)
+        Me.ClientSize = New System.Drawing.Size(300, 382)
+        Me.Controls.Add(Me.btnLeaderboard)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Tabs)
@@ -312,6 +351,7 @@ Partial Class Start
         Me.tabColours.PerformLayout()
         Me.tabOther.ResumeLayout(False)
         Me.tabOther.PerformLayout()
+        CType(Me.udAppleAmount, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbStartSpeed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -340,4 +380,7 @@ Partial Class Start
     Friend WithEvents cbSpeedIncrease As CheckBox
     Friend WithEvents cbDeathWalls As CheckBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblAppleAmount As Label
+    Friend WithEvents udAppleAmount As NumericUpDown
+    Friend WithEvents btnLeaderboard As Button
 End Class

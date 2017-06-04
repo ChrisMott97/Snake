@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Snake
+Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,15 +23,15 @@ Partial Class Snake
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Update = New System.Windows.Forms.Timer(Me.components)
+        Me.UpdateTimer = New System.Windows.Forms.Timer(Me.components)
         Me.lblScore = New System.Windows.Forms.Label()
         Me.btnPlayPause = New System.Windows.Forms.PictureBox()
         CType(Me.btnPlayPause, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Update
+        'UpdateTimer
         '
-        Me.Update.Enabled = True
+        Me.UpdateTimer.Enabled = True
         '
         'lblScore
         '
@@ -54,27 +54,27 @@ Partial Class Snake
         Me.btnPlayPause.TabIndex = 1
         Me.btnPlayPause.TabStop = False
         '
-        'Snake
+        'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(475, 415)
+        Me.ClientSize = New System.Drawing.Size(768, 748)
         Me.Controls.Add(Me.btnPlayPause)
         Me.Controls.Add(Me.lblScore)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
-        Me.Name = "Snake"
+        Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " "
-        Me.TransparencyKey = System.Drawing.Color.Wheat
+        Me.Text = " Snake"
+        Me.TransparencyKey = System.Drawing.Color.Yellow
         CType(Me.btnPlayPause, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Update As Timer
+    Friend WithEvents UpdateTimer As Timer
     Friend WithEvents lblScore As Label
     Friend WithEvents btnPlayPause As PictureBox
 End Class
