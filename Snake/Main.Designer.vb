@@ -23,6 +23,7 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.UpdateTimer = New System.Windows.Forms.Timer(Me.components)
         Me.lblScore = New System.Windows.Forms.Label()
         Me.btnPlayPause = New System.Windows.Forms.PictureBox()
@@ -63,6 +64,7 @@ Partial Class Main
         Me.Controls.Add(Me.btnPlayPause)
         Me.Controls.Add(Me.lblScore)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

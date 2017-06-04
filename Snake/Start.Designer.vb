@@ -22,6 +22,7 @@ Partial Class Start
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Start))
         Me.Tabs = New System.Windows.Forms.TabControl()
         Me.tabSize = New System.Windows.Forms.TabPage()
         Me.lblGameHeight = New System.Windows.Forms.Label()
@@ -75,10 +76,10 @@ Partial Class Start
         Me.tabSize.Controls.Add(Me.udGameHeight)
         Me.tabSize.Controls.Add(Me.lblGameWidth)
         Me.tabSize.Controls.Add(Me.udGameWidth)
-        Me.tabSize.Location = New System.Drawing.Point(4, 27)
+        Me.tabSize.Location = New System.Drawing.Point(4, 29)
         Me.tabSize.Name = "tabSize"
         Me.tabSize.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabSize.Size = New System.Drawing.Size(268, 208)
+        Me.tabSize.Size = New System.Drawing.Size(268, 206)
         Me.tabSize.TabIndex = 0
         Me.tabSize.Text = "Sizes"
         Me.tabSize.UseVisualStyleBackColor = True
@@ -133,10 +134,10 @@ Partial Class Start
         Me.tabColours.Controls.Add(Me.btnSnakeColour)
         Me.tabColours.Controls.Add(Me.lblBoardColour)
         Me.tabColours.Controls.Add(Me.btnBoardColour)
-        Me.tabColours.Location = New System.Drawing.Point(4, 27)
+        Me.tabColours.Location = New System.Drawing.Point(4, 29)
         Me.tabColours.Name = "tabColours"
         Me.tabColours.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabColours.Size = New System.Drawing.Size(268, 208)
+        Me.tabColours.Size = New System.Drawing.Size(268, 206)
         Me.tabColours.TabIndex = 1
         Me.tabColours.Text = "Colours"
         Me.tabColours.UseVisualStyleBackColor = True
@@ -210,10 +211,10 @@ Partial Class Start
         Me.tabOther.Controls.Add(Me.cbDeathWalls)
         Me.tabOther.Controls.Add(Me.tbStartSpeed)
         Me.tabOther.Controls.Add(Me.lblStartSpeed)
-        Me.tabOther.Location = New System.Drawing.Point(4, 27)
+        Me.tabOther.Location = New System.Drawing.Point(4, 29)
         Me.tabOther.Name = "tabOther"
         Me.tabOther.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabOther.Size = New System.Drawing.Size(268, 208)
+        Me.tabOther.Size = New System.Drawing.Size(268, 206)
         Me.tabOther.TabIndex = 2
         Me.tabOther.Text = "Other"
         Me.tabOther.UseVisualStyleBackColor = True
@@ -340,8 +341,9 @@ Partial Class Start
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Tabs)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Start"
-        Me.Text = "Start"
+        Me.Text = "Snake"
         Me.Tabs.ResumeLayout(False)
         Me.tabSize.ResumeLayout(False)
         Me.tabSize.PerformLayout()

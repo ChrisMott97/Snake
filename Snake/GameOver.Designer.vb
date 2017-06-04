@@ -22,6 +22,7 @@ Partial Class GameOver
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GameOver))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblScore = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -97,9 +98,10 @@ Partial Class GameOver
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "GameOver"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "GameOver"
+        Me.Text = "Game Over!"
         Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
